@@ -1,9 +1,12 @@
 import React from 'react';
 
 import './App.css';
+import CustomNav from './components/CustomNav/CustomNav';
 
 const App : React.FC = () => {
-  return <h1>About to start up my project</h1>
+  return(
+    <CustomNav/>
+  )
 }
 
 export default App;
