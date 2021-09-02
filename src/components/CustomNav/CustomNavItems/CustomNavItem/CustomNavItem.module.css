@@ -1,0 +1,18 @@
+.Custom_Nav_Item_Active{
+    color: #FCCA03 !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+.Custom_Nav_Item{
+    color: rgba(225, 215, 215, 0.686);
+    font-family: 'Poppins', sans-serif !important;
+    padding: 4px 6px;
+    margin-top: 3rem;
+    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.Icon_spacing_left{
+    margin-right: 15px;
+}

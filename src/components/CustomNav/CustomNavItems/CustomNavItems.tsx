@@ -1,28 +1,46 @@
+import { IconNames } from "../../CustomIcon/CustomIcon"
 import CustomNavItem from "./CustomNavItem/CustomNavItem"
+
+type NavItemData = {
+    path: string, 
+    name: string, 
+    exact: boolean, 
+    icon_name: IconNames
+}
 
 
 const CustomNavItems:React.FC = () => {
 
-    const NavItems = [
+    const NavItems: NavItemData[] =  [
         {
             path: "/home", 
-            name: "Name"
+            name: "Home", 
+            exact: true, 
+            icon_name: "IoHomeSharp"
         },
         {
             path: "/my-library", 
-            name: "My Library"
+            name: "My Library", 
+            exact: false, 
+            icon_name: "IoLibrarySharp"
         },
         {
             path: "/liked-song", 
-            name: "Liked Song"
+            name: "Liked Song", 
+            exact: false, 
+            icon_name: "IoMusicalNotesSharp"
         },
         {
             path: "/create-playlist", 
-            name: "Create Playlist"
+            name: "Create Playlist", 
+            exact: false, 
+            icon_name: "IoAddCircleSharp"
         },
         {
             path: "/settings", 
-            name: "Settings"
+            name: "Settings", 
+            exact: false, 
+            icon_name: "IoSettingsSharp"
         }
     ]
 
@@ -31,6 +49,8 @@ const CustomNavItems:React.FC = () => {
             <CustomNavItem
             name={singleNav.name}
             path={singleNav.path} 
+            exact={singleNav.exact}
+            icon_name={singleNav.icon_name}
             />
         )
     })
